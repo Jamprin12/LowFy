@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "title": "Chill Gaming",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-07_-_Chill_Gaming_-_David_Fesliyan.mp3",
+    "duration": 187.771325
+  },
+  {
+    "id": 0,
+    "title": "HomeWork",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-12_-_Homework_-_David_Fesliyan.mp3",
+    "duration": 212.666025
+  },
+  {
+    "id": 2,
+    "title": "Vibes",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-08-09_-_Vibes_-_www.FesliyanStudios.com_-_David_Renda.mp3",
+    "duration": 187.928075
+  },
+  {
+    "id": 3,
+    "title": "I Got This",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-12_-_I_Got_This_-_www.fesliyanstudios.com_-_David_Renda.mp3",
+    "duration": 197.410525
+  },
+  {
+    "id": 4,
+    "title": "Done With Work",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-07-02_-_Done_With_Work_-_www.FesliyanStudios.com_-_David_Renda.mp3",
+    "duration": 197.7501
+  },
+  {
+    "id": 5,
+    "title": "On My Own",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-27_-_On_My_Own_-_www.FesliyanStudios.com_-_David_Renda.mp3",
+    "duration": 199.526425
+  },
+
+  {
+    "id": 6,
+    "title": "On And About",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-21_-_Out_And_About_-_www.FesliyanStudios.com_-_David_Renda.mp3",
+    "duration": 182.6252
+  },
+  {
+    "id": 7,
+    "title": "Feels Good",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-07-10_-_Feels_Good_-_David_Renda.mp3",
+    "duration": 198.27255
+  },
+  {
+    "id": 8,
+    "title": "Lazy Day",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-18_-_Lazy_Day_-_www.FesliyanStudios.com_-_David_Renda.mp3",
+    "duration": 196.888075
+  },
+  {
+    "id": 9,
+    "title": "Bobbin",
+    "url": "https://www.fesliyanstudios.com/musicfiles/2019-06-25_-_Bobbin_-_www.FesliyanStudios.com_-_David_Renda.mp3",
+    "duration": 196.600725
+  }
+]

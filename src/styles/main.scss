@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
+
+$background: #242424;
+$content: #db3333;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+
+.audio-wrapper {
+  width: 1366px;
+  max-width: 100%;
+  height: 100vh;
+  background-color: $background;
+  color: #fff;
+  padding: 1em;
+  .actions-section {
+    button {
+      margin: 20px 10px;
+      border: none;
+      border-radius: 30px;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      font-size: 1.2rem;
+      background-color: $content;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        border-radius: 5px;
+      }
+      &:nth-child(2) {
+        transform: scale(1.5);
+      }
+    }
+    .volume {
+      .button-volume {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      input {
+        display: block;
+        margin: auto;
+        width: 0vw;
+        height: 5px;
+        background-color: $content;
+        transition: all 0.3s;
+        &:hover {
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .info-song {
+    h3 {
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
+    .duration {
+      margin: auto;
+      width: 0vw;
+      height: 10px;
+      border-radius: 10px;
+      background-color: lighten($background, 10);
+      position: relative;
+      overflow: hidden;
+      transition: 0.25s;
+      &:hover {
+        height: 20px;
+      }
+      .now {
+        position: absolute;
+        left: 0;
+        background-color: $content;
+        transition: 0.1s;
+        width: 0%; // For modify in Js
+        height: 100%;
+      }
+    }
+  }
+
+  .select-song {
+    width: 75vw;
+    height: 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: 300;
+    font-size: 5px;
+    transition: all 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+      font-size: 20px;
+      height: 25px;
+    }
+  }
+
+  .searcher {
+    position: relative;
+    input {
+      margin-top: 30px;
+      border-radius: 10px;
+      font-size: 5px;
+      text-align: center;
+      border: none;
+      width: 60vw;
+      height: 5px;
+      transition: 0.3s;
+      &:hover,
+      &:active,
+      &:focus {
+        height: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+}
