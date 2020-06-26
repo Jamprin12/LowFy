@@ -12,21 +12,22 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow-x: hidden;
+  transition: all 0.3s;
 }
 
 .app {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  transition: all 0.3s;
 }
 
 .audio-wrapper {
-  width: 1366px;
-  max-width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: #242424;
+  background: #242424;
   color: #fff;
   padding: 1em;
+  transition: all 0.3s;
 }
 .audio-wrapper .actions-section button {
   margin: 20px 10px;
@@ -39,6 +40,9 @@ body {
   background-color: #db3333;
   transition: all 0.3s;
   cursor: pointer;
+}
+.audio-wrapper .actions-section button:focus {
+  border: none;
 }
 .audio-wrapper .actions-section button:hover {
   border-radius: 5px;
@@ -53,12 +57,61 @@ body {
   cursor: pointer;
 }
 .audio-wrapper .actions-section .volume input {
+  -webkit-appearance: none;
   display: block;
   margin: auto;
   width: 0vw;
   height: 5px;
   background-color: #db3333;
   transition: all 0.3s;
+}
+.audio-wrapper .actions-section .volume input::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.audio-wrapper .actions-section .volume input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.audio-wrapper .actions-section .volume input::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.audio-wrapper .actions-section .volume input::-ms-fill-lower, .audio-wrapper .actions-section .volume input::-ms-fill-upper {
+  border-radius: 30px;
+}
+.audio-wrapper .actions-section .volume input::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.audio-wrapper .actions-section .volume input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.audio-wrapper .actions-section .volume input::-ms-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.audio-wrapper .actions-section .volume input:focus::-ms-fill-lower, .audio-wrapper .actions-section .volume input:focus::-ms-fill-upper, .audio-wrapper .actions-section .volume input:-webkit-slider-runnable-track, .audio-wrapper .actions-section .volume input::-ms-thumb, .audio-wrapper .actions-section .volume input::-webkit-slider-thumb, .audio-wrapper .actions-section .volume input:focus::-webkit-slider-runnable-track, .audio-wrapper .actions-section .volume input::-moz-range-thumb, .audio-wrapper .actions-section .volume input::-moz-range-track {
+  background: #db3333;
+}
+.audio-wrapper .actions-section .volume input:focus {
+  outline: none;
 }
 .audio-wrapper .actions-section .volume input:hover {
   height: 20px;
@@ -89,7 +142,7 @@ body {
   height: 100%;
 }
 .audio-wrapper .select-song {
-  width: 75vw;
+  width: 65vw;
   height: 10px;
   border-radius: 20px;
   text-align: center;
@@ -118,6 +171,12 @@ body {
 .audio-wrapper .searcher input:hover, .audio-wrapper .searcher input:active, .audio-wrapper .searcher input:focus {
   height: 20px;
   font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1.5em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

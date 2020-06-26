@@ -2,6 +2,9 @@
 
 $background: #242424;
 $content: #db3333;
+$fullwidth: 100vw;
+$fullheight: 100vh;
+$transition: all 0.3s;
 
 * {
   box-sizing: border-box;
@@ -16,21 +19,22 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow-x: hidden;
+  transition: $transition;
 }
 
 .app {
-  width: 100%;
-  height: 100vh;
+  width: $fullwidth;
+  height: $fullheight;
+  transition: $transition;
 }
 
 .audio-wrapper {
-  width: 1366px;
-  max-width: 100%;
-  height: 100vh;
-  background-color: $background;
+  width: $fullwidth;
+  height: $fullheight;
+  background: $background;
   color: #fff;
   padding: 1em;
+  transition: $transition;
   .actions-section {
     button {
       margin: 20px 10px;
@@ -43,6 +47,9 @@ body {
       background-color: $content;
       transition: all 0.3s;
       cursor: pointer;
+      &:focus {
+        border: none;
+      }
       &:hover {
         border-radius: 5px;
       }
@@ -57,13 +64,71 @@ body {
         font-size: 15px;
         cursor: pointer;
       }
+
       input {
+        -webkit-appearance: none;
         display: block;
         margin: auto;
         width: 0vw;
         height: 5px;
         background-color: $content;
-        transition: all 0.3s;
+        transition: $transition;
+        &::-moz-range-track {
+          width: 100%;
+          height: 5px;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+        &::-moz-range-thumb {
+          height: 15px;
+          width: 15px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+        &::-ms-track {
+          width: 100%;
+          height: 5px;
+          cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          color: transparent;
+        }
+        &::-ms-fill-lower,
+        &::-ms-fill-upper {
+          border-radius: 30px;
+        }
+        &::-webkit-slider-thumb {
+          height: 15px;
+          width: 15px;
+          border-radius: 20px;
+          cursor: pointer;
+          -webkit-appearance: none;
+        }
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 5px;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+        &::-ms-thumb {
+          height: 15px;
+          width: 15px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+        &:focus::-ms-fill-lower,
+        &:focus::-ms-fill-upper,
+        &:-webkit-slider-runnable-track,
+        &::-ms-thumb,
+        &::-webkit-slider-thumb,
+        &:focus::-webkit-slider-runnable-track,
+        &::-moz-range-thumb,
+        &::-moz-range-track {
+          background: $content;
+        }
+        &:focus {
+          outline: none;
+        }
         &:hover {
           height: 20px;
         }
@@ -93,21 +158,21 @@ body {
         left: 0;
         background-color: $content;
         transition: 0.1s;
-        width: 0%; // For modify in Js
+        width: 0%;
         height: 100%;
       }
     }
   }
 
   .select-song {
-    width: 75vw;
+    width: 65vw;
     height: 10px;
     border-radius: 20px;
     text-align: center;
     margin: 10px auto;
     font-weight: 300;
     font-size: 5px;
-    transition: all 0.3s;
+    transition: $transition;
     &:hover,
     &:active,
     &:focus {
@@ -134,5 +199,11 @@ body {
         font-size: 14px;
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1.5em;
   }
 }
