@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "src",
-    "strict": true
-  },
-  "include": ["src", "src/**/*.js"],
-  "exclude": ["node_modules", "build"]
-}

@@ -1,6 +1,9 @@
-import React from "react";
+import * as React from 'react'
+import { useStore } from '../../store'
 
-export default function InfoSong({ currentSong }) {
+export default function InfoSong() {
+  const [{ currentSong }] = useStore()
+
   return (
     <div className="info-song">
       <h3>{currentSong.title}</h3>
@@ -10,5 +13,5 @@ export default function InfoSong({ currentSong }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

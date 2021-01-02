@@ -1,33 +1,25 @@
 {
-  "name": "low-fy",
-  "version": "0.1.0",
-  "private": true,
-  "main": "./src/electron.js",
-  "dependencies": {
-    "electron": "^9.0.4",
-    "electron-is-dev": "^1.2.0",
-    "react": "lastest",
-    "react-dom": "lastest",
-    "react-scripts": "lastest"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "electron": "electron ."
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "web-test-runner \"src/**/*.test.jsx\"",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx}\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-icons": "^4.1.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-react-refresh": "^2.3.9",
+    "@snowpack/plugin-sass": "^1.2.0",
+    "@snowpack/web-test-runner-plugin": "^0.1.5",
+    "@testing-library/react": "^11.0.0",
+    "@web/test-runner": "^0.10.0",
+    "chai": "^4.2.0",
+    "prettier": "^2.0.5",
+    "snowpack": "^2.18.4"
   }
 }
