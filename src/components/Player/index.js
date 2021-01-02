@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import data from "../services/data.json";
+import data from "songs/data.json";
+import InfoSong from "../InfoSong";
 
 export default function Player() {
-  // const [search, setSearch] = useState("lofi");
   const [songs, setSongs] = useState([]);
   const [currentSong, setCurrentSong] = useState(
     data[Math.floor(Math.random() * data.length)]
@@ -13,7 +13,7 @@ export default function Player() {
   useEffect(() => {
     setSongs(data);
     setAudio(document.querySelector("#song"));
-    setVolume(document.querySelector("#volume").value / 100);
+    setVolume(document.querySelector("#volume").value / 50);
   }, []);
 
   const onLoading = () => {
@@ -28,7 +28,7 @@ export default function Player() {
 
     if (!song) return;
 
-    await setCurrentSong(song);
+    setCurrentSong(song);
     playSong();
   };
 
@@ -40,7 +40,7 @@ export default function Player() {
 
       if (!song) return;
 
-      await setCurrentSong(song);
+      setCurrentSong(song);
       playSong();
     }
 
@@ -62,7 +62,7 @@ export default function Player() {
 
     if (!audio.currentSrc) return;
 
-    await audio.play();
+    audio.play();
   };
 
   const pauseSong = async () => {
@@ -117,6 +117,7 @@ export default function Player() {
             id="volume"
             max="100"
             min="0"
+            value={volume}
             onChange={(e) => {
               setVolume(e.target.value / 100);
               audio.volume = volume;
@@ -139,22 +140,7 @@ export default function Player() {
           ))}
         </select>
       </div>
-      <div className="info-song">
-        <h3>{currentSong.title}</h3>
-        <div className="duration-section">
-          <div className="duration">
-            <div className="now"></div>
-          </div>
-        </div>
-      </div>
-      {/* <div className="searcher">
-        <input
-          type="text"
-          onChange={handleInput}
-          value={search}
-          placeholder="Search"
-        />
-      </div> */}
+      <InfoSong currentSong={currentSong} />
     </div>
   );
 }
